@@ -1,18 +1,20 @@
 module("About Reflection (topics/about_reflection.js)");
 
+//creates an object a key value pair (aprop, "A"), or adds this (k,v) pair to the object (?)
 function A() {
     this.aprop = "A";
 };
 
-function B() {
+//creates an object a key value pair (bprop, "B"), or adds this (k,v) pair to the object (?)function B() {
     this.bprop = "B";
 };
 
+// gives
 B.prototype = new A();
 
 test("typeof", function() {
-    equal(__, typeof({}), 'what is the type of an empty object?');
-    equal(__, typeof('apple'), 'what is the type of a string?');
+    equal("object", typeof({}), 'what is the type of an empty object?');
+    equal("string", typeof('apple'), 'what is the type of a string?');
     equal(__, typeof(-5), 'what is the type of -5?');
     equal(__, typeof(false), 'what is the type of false?');
 });
